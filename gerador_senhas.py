@@ -3,21 +3,18 @@ import string
 
 
 def gerar_senha_numerica(tamanho):
-    """Gera uma senha composta apenas por números."""
     numeros = string.digits
     senha = "".join(random.choice(numeros) for _ in range(tamanho))
     return senha
 
 
 def gerar_senha_completa(tamanho):
-    """Gera uma senha com letras, números e símbolos."""
     caracteres = string.ascii_letters + string.digits + string.punctuation
     senha = "".join(random.choice(caracteres) for _ in range(tamanho))
     return senha
 
 
 def pedir_tamanho():
-    """Pede ao usuário o tamanho da senha e valida a entrada."""
     while True:
         entrada = input("Quantos caracteres você quer na senha? ")
 
@@ -28,7 +25,6 @@ def pedir_tamanho():
 
 
 def mostrar_menu():
-    """Exibe o menu de opções e retorna a escolha do usuário."""
     print("\n=== Gerador de Senhas ===")
     print("1 - Senha numérica  (ex: 482910)")
     print("2 - Senha completa  (ex: aB3#kL!9)")
